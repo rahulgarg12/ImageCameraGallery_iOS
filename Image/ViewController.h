@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIImagePickerControllerDelegate>
+
+@property (strong, nonatomic) IBOutlet UIImage *imageView;
+@property (strong, nonatomic) IBOutlet UIButton *gallery, *camera;
+
+- (IBAction)camera:  (UIButton *)sender;
+- (IBAction)gallery:(UIButton *)sender;
 
 @end
